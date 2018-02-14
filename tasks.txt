@@ -1,0 +1,7 @@
+1-> Adaptar el router para que permita la asignacion y validacion de rutas predefinidas.
+2-> Adaptar la clase request para reconocimiento de peticiones por get y post.
+3-> Adaptar el router y el controlador para resivir peticiones en ajax.
+4-> insertar la plantilla layout.
+5-> crear unas palntillas maestro.
+6-> login in and login out.
+7-> validacion por perfil de usuario.
