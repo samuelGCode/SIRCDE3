@@ -4,21 +4,42 @@ use app\controllers as ctrl;
 
 class View{
 
-	public static function show($controller, $method){
-		$layoutPath = ROOT . "views/layout.html";
-		$pagePath = ROOT . "views/pages/" . $controller . DS . $method . ".html";
+	private static $layoutOption = "top-nav";
 
-		if(!ctrl\SessionController::authenticate())
-			$pagePath = ROOT . "views/pages/403.html";
-		else{
+	public static function show($controller, $method){
+		$layoutPath = ROOT . "app/views/layout-" . self::$layoutOption . ".html";
+		$menuPath = ROOT . "app/views/menu-" . self::$layoutOption . ".html";
+		$pagePath = ROOT . "app/views/pages/" . $controller . DS . $method . ".html";
+		$modalsPath = ROOT . "app/views/pages/" . $controller . DS . "modals.html";
+
+		if(!ctrl\SessionController::authenticate()){
+			$pagePath = ROOT . "app/views/pages/error/403.html";
+		}else{
 			if(!file_exists($pagePath))
-				$pagePath = ROOT . "views/pages/404.html";
+				$pagePath = ROOT . "app/views/pages/error/404.html";
 		}
 
-		$readyView = file_get_contents($layoutPath);
-		$readyView = str_replace("%content-wrapper%", file_get_contents($pagePath), $readyView);
+		$layoutView = file_get_contents($layoutPath);
+		$menuView = file_get_contents($menuPath);
+		$pageView = file_get_contents($pagePath);
 
-		echo $readyView;
+		$layoutView = str_replace("%menu%", $menuView, $layoutView);
+		$layoutView = str_replace("%content-wrapper%", $pageView, $layoutView);
+
+		if(file_exists($modalsPath)){
+			$modalsView = file_get_contents($modalsPath);
+			$layoutView = str_replace("%modals%", $modalsView, $layoutView);
+		}
+
+		echo $layoutView;
+	}
+
+	public static function setLayoutOption($name){
+		self::$layoutOption = $name;
+	}
+
+	private static function drawMenu($menuView, $privileges){
+
 	}
 
 }

@@ -1,7 +1,15 @@
 1-> Adaptar el router para que permita la asignacion y validacion de rutas predefinidas.
 2-> Adaptar la clase request para reconocimiento de peticiones por get y post.
 3-> Adaptar el router y el controlador para resivir peticiones en ajax.
-4-> insertar la plantilla layout.
-5-> crear unas palntillas maestro.
+4->* insertar la plantilla layout.
+5-> crear unas plantillas maestro: una sencilla y otra compleja.
 6-> login in and login out.
-7-> validacion por perfil de usuario.
+7-> validar log in con captcha.
+8-> bloqueo del usuario por inactividad.
+9-> validacion por perfil de usuario.
+10->* evitar que el usuario acceda a las carpetas del sistema por error.
+11-> desarrollar elmenu dinamico segun el perfil del usuario.
+12-> cerrar la sesion por inactividad en un tiempo determinado y configurable.
+13-> vista y control del manual del sistema.
+14-> pagina del tablero de inicio configurable.
+15-> comentar todo el codigo fuente.

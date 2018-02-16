@@ -1,6 +1,6 @@
 <?php namespace app\controllers;
 
-class homeController{
+class InicioController{
 
 
 	public function __construct(){

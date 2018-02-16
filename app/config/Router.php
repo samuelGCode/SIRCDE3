@@ -3,42 +3,53 @@
 use app\views;
 
 class Router{
-
-	private static $requests;
 	
 	public static function run(Request $request){
-
-		$controller = $request->getController() . "Controller";
+		//obtener el nombre de la clase del controlador
+		$controller = $request->getClassNameController() . "Controller";
+		//obtener la ruta del script php del controlador
 		$route = ROOT . "server/controllers" . DS . $controller . ".php";
 
-		$method = $request->getMethod();
+		//capturar el metodo y los argumentos
+		$method = $request->getMethodName();
 		if($method == "index.php")
 			$method = "index";
 
-		$argument = $request->getArgument();
+		$arguments = $request->getArguments();
 
-		//Cargar vista
-		views\View::show($request->getController(), $request->getMethod());
-
+		//si la ruta es legible y existe
 		if(is_readable($route)){
-			//require_once $route;
-			$mostrar = "server\\controllers\\" . $controller;
-			$controller = new $mostrar;
-			if(empty($argument)){
+			//agregar el namespace e instanciar el controlador
+			$controller = "server\\controllers\\" . $controller;
+			$controller = new $controller;
+
+			//ejecutar el metodo correspondiente del controlador y 
+			//se le pasan los argumentos si es que los tiene
+			if(empty($arguments)){
 				$datos = call_user_func(array($controller, $method));
-				print "hola soy la opcion 1";
 			}else{
-				$datos = call_user_func_array(array($controller, $method), $argument);
-				print "hola soy la opcion 2";
+				$datos = call_user_func_array(array($controller, $method), $arguments);
 			}
 		}
 
-	}
-
-	public static function config(string $route, Controller $ctrl = null, $callback){
-		self::$requests = array();
+		//Cargar la vista
+		views\View::show($request->getControllerName(), $request->getMethodName());
 
 	}
+
+	//futura funcion para asignar las rutas para gestionar las peticiones en ajax 
+	//por el metodo get
+	public static function ajaxGet(string $route, $callback, Controller $ctrl = null){
+		
+	}
+
+	//futura funcion para asignar las rutas para gestionar las peticiones en ajax 
+	//por el metodo post
+	public static function ajaxPost(string $route, $callback, Controller $ctrl = null){
+		
+	}
+
 }
+
 
 ?>

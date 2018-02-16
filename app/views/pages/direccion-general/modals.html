@@ -1,0 +1,476 @@
+<div class="modal" id="modal-reg-estado" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4>
+					<span class="logo-lg"><b>Dirección General: </b>Registrar Nuevo Estado</span>
+				</h4>
+			</div>
+			<div class="modal-body">
+				<form role="form">
+					<div class="row">
+						<div class="col-md-12">
+							<!-- text input -->
+							<div class="form-group">
+								<label>Nombre</label>
+								<input id="text-reg-estado" type="text" class="form-control" placeholder="Nombre del Estado">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">
+					Cerrar
+				</button>
+				<button id="btn-reg-estado" type="button" class="btn btn-primary">Guardar</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div class="modal" id="modal-mod-estado" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4>
+					<span class="logo-lg"><b>Dirección General: </b>Modificar Estado</span>
+				</h4>
+			</div>
+			<div class="modal-body">
+				<form role="form">
+					<div class="row">
+						<div class="col-md-12">
+							<!-- text input -->
+							<div class="form-group">
+								<label>Nombre</label>
+								<input id="text-mod-estado" type="text" class="form-control" placeholder="Nombre del Estado">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cerrar</button>
+				<button id="btn-mod-estado" type="button" class="btn btn-primary">Guardar</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div class="modal" id="modal-reg-municipio" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4>
+					<span class="logo-lg"><b>Dirección General: </b>Registrar Nuevo Municipio</span>
+				</h4>
+			</div>
+			<div class="modal-body">
+				<form role="form">
+					<div class="row">
+						<div class="col-md-6">
+							<!-- select -->
+							<div class="form-group">
+								<label>Estado</label>
+								<select id="slt-reg-estado-municipio" class="form-control select2" style="width: 100%;">
+									<option selected="selected">Alabama</option>
+									<option>Alaska</option>
+									<option>California</option>
+									<option>Delaware</option>
+									<option>Tennessee</option>
+									<option>Texas</option>
+									<option>Washington</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<!-- text input -->
+							<div class="form-group">
+								<label>Nombre</label>
+								<input id="text-reg-municipio" type="text" class="form-control" placeholder="Nombre del Estado">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">
+					Cerrar
+				</button>
+				<button id="btn-reg-municipio" type="button" class="btn btn-primary">Guardar</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div class="modal" id="modal-mod-municipio" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4>
+					<span class="logo-lg"><b>Dirección General: </b>Modificar Municipio</span>
+				</h4>
+			</div>
+			<div class="modal-body">
+				<form role="form">
+					<div class="row">
+						<div class="col-md-6">
+							<!-- select -->
+							<div class="form-group">
+								<label>Estado</label>
+								<select id="slt-mod-estado-municipio" class="form-control select2" style="width: 100%;">
+									<option selected="selected">Alabama</option>
+									<option>Alaska</option>
+									<option>California</option>
+									<option>Delaware</option>
+									<option>Tennessee</option>
+									<option>Texas</option>
+									<option>Washington</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<!-- text input -->
+							<div class="form-group">
+								<label>Nombre</label>
+								<input id="text-mod-municipio" type="text" class="form-control" placeholder="Nombre del Estado">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cerrar</button>
+				<button id="btn-mod-municipio" type="button" class="btn btn-primary">Guardar</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div class="modal" id="modal-reg-parroquia" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4>
+					<span class="logo-lg"><b>Dirección General: </b>Registrar Nueva Parroquia</span>
+				</h4>
+			</div>
+			<div class="modal-body">
+				<form role="form">
+					<div class="row">
+						<div class="col-md-6">
+							<!-- select -->
+							<div class="form-group">
+								<label>Estado</label>
+								<select id="slt-reg-estado-parroquia" class="form-control select2" style="width: 100%;">
+									<option selected="selected">Alabama</option>
+									<option>Alaska</option>
+									<option>California</option>
+									<option>Delaware</option>
+									<option>Tennessee</option>
+									<option>Texas</option>
+									<option>Washington</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<!-- select -->
+							<div class="form-group">
+								<label>Municipio</label>
+								<select id="slt-reg-municipio-parroquia" class="form-control select2" style="width: 100%;">
+									<option selected="selected">Alabama</option>
+									<option>Alaska</option>
+									<option>California</option>
+									<option>Delaware</option>
+									<option>Tennessee</option>
+									<option>Texas</option>
+									<option>Washington</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<!-- text input -->
+							<div class="form-group">
+								<label>Nombre</label>
+								<input id="text-reg-parroquia" type="text" class="form-control" placeholder="Nombre del Estado">
+							</div>
+						</div>
+					</div>
+
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">
+					Cerrar
+				</button>
+				<button id="btn-reg-parroquia" type="button" class="btn btn-primary">Guardar</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div class="modal" id="modal-mod-parroquia" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4>
+					<span class="logo-lg"><b>Dirección General: </b>Modificar Parroquia</span>
+				</h4>
+			</div>
+			<div class="modal-body">
+				<form role="form">
+					<div class="row">
+						<div class="col-md-6">
+							<!-- select -->
+							<div class="form-group">
+								<label>Estado</label>
+								<select id="slt-mod-estado-parroquia" class="form-control select2" style="width: 100%;">
+									<option selected="selected">Alabama</option>
+									<option>Alaska</option>
+									<option>California</option>
+									<option>Delaware</option>
+									<option>Tennessee</option>
+									<option>Texas</option>
+									<option>Washington</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<!-- select -->
+							<div class="form-group">
+								<label>Municipio</label>
+								<select id="slt-mod-municipio-parroquia" class="form-control select2" style="width: 100%;">
+									<option selected="selected">Alabama</option>
+									<option>Alaska</option>
+									<option>California</option>
+									<option>Delaware</option>
+									<option>Tennessee</option>
+									<option>Texas</option>
+									<option>Washington</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<!-- text input -->
+							<div class="form-group">
+								<label>Nombre</label>
+								<input id="text-mod-parroquia" type="text" class="form-control" placeholder="Nombre del Estado">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cerrar</button>
+				<button id="btn-mod-parroquia" type="button" class="btn btn-primary">Guardar</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div class="modal" id="modal-reg-sector" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4>
+					<span class="logo-lg"><b>Dirección General: </b>Registrar Nuevo Sector</span>
+				</h4>
+			</div>
+			<div class="modal-body">
+				<form role="form">
+					<div class="row">
+						<div class="col-md-6">
+							<!-- select -->
+							<div class="form-group">
+								<label>Estado</label>
+								<select id="slt-reg-estado-sector" class="form-control select2" style="width: 100%;">
+									<option selected="selected">Alabama</option>
+									<option>Alaska</option>
+									<option>California</option>
+									<option>Delaware</option>
+									<option>Tennessee</option>
+									<option>Texas</option>
+									<option>Washington</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<!-- select -->
+							<div class="form-group">
+								<label>Municipio</label>
+								<select id="slt-reg-municipio-sector" class="form-control select2" style="width: 100%;">
+									<option selected="selected">Alabama</option>
+									<option>Alaska</option>
+									<option>California</option>
+									<option>Delaware</option>
+									<option>Tennessee</option>
+									<option>Texas</option>
+									<option>Washington</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<!-- select -->
+							<div class="form-group">
+								<label>Parroquia</label>
+								<select id="slt-reg-parroquia-sector" class="form-control select2" style="width: 100%;">
+									<option selected="selected">Alabama</option>
+									<option>Alaska</option>
+									<option>California</option>
+									<option>Delaware</option>
+									<option>Tennessee</option>
+									<option>Texas</option>
+									<option>Washington</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<!-- text input -->
+							<div class="form-group">
+								<label>Nombre</label>
+								<input id="text-reg-sector" type="text" class="form-control" placeholder="Nombre del Estado">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">
+					Cerrar
+				</button>
+				<button id="btn-reg-sector" type="button" class="btn btn-primary">Guardar</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div class="modal" id="modal-mod-sector" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4>
+					<span class="logo-lg"><b>Dirección General: </b>Modificar Sector</span>
+				</h4>
+			</div>
+			<div class="modal-body">
+				<form role="form">
+					<div class="row">
+						<div class="col-md-6">
+							<!-- select -->
+							<div class="form-group">
+								<label>Estado</label>
+								<select id="slt-mod-estado-sector" class="form-control select2" style="width: 100%;">
+									<option selected="selected">Alabama</option>
+									<option>Alaska</option>
+									<option>California</option>
+									<option>Delaware</option>
+									<option>Tennessee</option>
+									<option>Texas</option>
+									<option>Washington</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<!-- select -->
+							<div class="form-group">
+								<label>Municipio</label>
+								<select id="slt-mod-municipio-sector" class="form-control select2" style="width: 100%;">
+									<option selected="selected">Alabama</option>
+									<option>Alaska</option>
+									<option>California</option>
+									<option>Delaware</option>
+									<option>Tennessee</option>
+									<option>Texas</option>
+									<option>Washington</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<!-- select -->
+							<div class="form-group">
+								<label>Parroquia</label>
+								<select id="slt-mod-parroquia-sector" class="form-control select2" style="width: 100%;">
+									<option selected="selected">Alabama</option>
+									<option>Alaska</option>
+									<option>California</option>
+									<option>Delaware</option>
+									<option>Tennessee</option>
+									<option>Texas</option>
+									<option>Washington</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<!-- text input -->
+							<div class="form-group">
+								<label>Nombre</label>
+								<input id="text-mod-sector" type="text" class="form-control" placeholder="Nombre del Estado">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cerrar</button>
+				<button id="btn-mod-sector" type="button" class="btn btn-primary">Guardar</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+		<!-- /.modal -->
