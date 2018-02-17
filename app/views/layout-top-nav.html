@@ -24,6 +24,7 @@
 	<link rel="stylesheet" href="plugins/select2/select2.min.css">
 	<!-- DataTables -->
 	<link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
+
 	<!-- Theme style -->
 	<link rel="stylesheet" href="adminlte/dist/css/AdminLTE.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -236,11 +237,15 @@
 	<!-- DataTables -->
 	<script src="plugins/datatables/jquery.dataTables.min.js"></script>
 	<script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+	<!-- InputMask -->
+	<script src="plugins/input-mask/jquery.inputmask.js"></script>
+	<script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+	<script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
 
 	<!-- AdminLTE App -->
 	<script src="adminlte/dist/js/app.min.js"></script>
 	
-
+	<script src="app/views/js/foto.js"></script>
 
 	<script type="text/javascript">
 		$(function () {
@@ -249,13 +254,19 @@
     //Initialize Select2 Elements
     $(".select2").select2();
 
+    $("[data-mask]").inputmask();
+
     $('.tablas-pruebas').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false
+    	"paging": true,
+    	"lengthChange": false,
+    	"searching": true,
+    	"ordering": true,
+    	"info": true,
+    	"autoWidth": false
+    });
+
+    $('#agregar-ciudadano').click(function(event) {
+    	fotoCiudadano();
     });
   });
 </script>
